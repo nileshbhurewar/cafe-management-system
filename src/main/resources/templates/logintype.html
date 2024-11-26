@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/logintype.css">
+    <title>Login Type - Cafe Management System</title>
+  </head>
+  <body>
+  
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Cafe Management System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login-type">Log In</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Main Content -->
+    <div class="container mt-5">
+      <div class="login-type-section">
+        <h1 class="text-center mb-4">Welcome to Cafe Management System</h1>
+        <p class="text-center">Select your login type to proceed:</p>
+        
+        <div class="role-links text-center">
+          <a href="customer-login" class="btn btn-primary btn-lg mx-2">Customer Login</a>
+          <a href="employee-login" class="btn btn-success btn-lg mx-2">Employee Login</a>
+          <a href="admin-login" class="btn btn-danger btn-lg mx-2">Admin Login</a>
+        </div>
+
+        <div class="info-section mt-5">
+          <h2>About Our Login Types</h2>
+          <p><strong>Customer Login:</strong> For our esteemed customers to place orders, view menus, and manage their accounts.</p>
+          <p><strong>Employee Login:</strong> Dedicated access for staff to manage daily operations and order processing.</p>
+          <p><strong>Admin Login:</strong> Comprehensive access for system administrators to oversee the management system.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+      &copy; 2024 Cafe Management System. All Rights Reserved.
+    </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

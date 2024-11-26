@@ -1,0 +1,134 @@
+/* General styling for body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #0056b3;
+}
+
+/* greeting message*/
+ .greeting-message {
+            background-color: #e0f7fa;
+            border-left: 5px solid #00796b;
+            padding: 20px;
+            margin-bottom: 30px;
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2em;
+        }
+        /* Container Styling for Greeting */
+.greeting-container {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #d4edda;  /* Light green background */
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+}
+
+
+           .greeting-message h4 {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        .greeting-message p {
+            color: #00796b;
+            margin-bottom: 10px;
+        }
+
+        .greeting-message .greeting-footer {
+            font-size: 1em;
+            font-style: italic;
+            color: #004d40;
+       }
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+/* Main content Styling */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Error Message Styling */
+.text-danger {
+    font-size: 0.9rem;
+    color: red;
+}
+
+/* Alert Message */
+.alert-info {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Management Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS for additional styling -->
+    <link rel="stylesheet" href="/css/admin-dashboard.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand text-white" href="#">Cafe Management</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="admin-dashboard">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="aboutus">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contactus">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="employee-create">Add Employee</a>
+        <a href="employee-update">Update Employee</a>
+        <a href="employee-view-all">View All Employees</a>
+        <a href="employee-delete">Delete Employee</a>
+        <a href="#">Admin Profile</a>
+        <a href="#">Forgot Password</a>
+        <a href="/">Log Out</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <h1>Welcome to the Admin Dashboard</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Admin Panel</h3>
+                    <p>Manage the cafe system by adding, updating, or deleting employees, view profiles, and more.</p>
+                </div>
+            </div>
+            <!-- Additional Content Area -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Employees Overview</h5>
+                            <p class="card-text">Quick access to employee data.</p>
+                            <a href="employee-view-all" class="btn btn-primary">View All Employees</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Profile Settings</h5>
+                            <p class="card-text">Manage your admin profile settings.</p>
+                            <a href="#" class="btn btn-primary">Edit Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">System Settings</h5>
+                            <p class="card-text">Adjust system settings.</p>
+                            <a href="#" class="btn btn-primary">Settings</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

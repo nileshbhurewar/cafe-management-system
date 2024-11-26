@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add to Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/add-to-cart.css">  <!-- Link to external CSS -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="/customer-dashboard">Cafe Management</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/customer-dashboard">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/add-to-cart">Add to Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="/aboutus">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contactus">Contacts</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5" style="margin-top: 100px;">
+        <h2 class="text-center mb-4">Your Cart</h2>
+        <div th:each="item : ${cartItems}">
+            <div class="row mb-3">
+                <div class="col-md-8">
+                    <div class="card cart-item-card">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="${item.dish.name}"></h5>
+                            <p class="card-text" th:text="${item.dish.description}"></p>
+                            <p>Price: ₹<span th:text="${item.dish.price}"></span></p>
+                            <p>Quantity: <span th:text="${item.quantity}"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Price Section -->
+        <div class="total-price-section text-center mt-4">
+            <h4>Total Price: ₹<span th:text="${totalPrice}"></span></h4>
+            <a href="/payment" class="btn btn-success mt-3">Proceed to Payment</a>
+        </div>
+    </div>
+
+</body>
+</html>

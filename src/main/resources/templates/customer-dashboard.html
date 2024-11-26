@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/customer-dashboard.css"> <!-- External CSS -->
+</head>
+<body>
+    <!-- Hero Section with Cover Image -->
+    <div class="hero-section">
+        <h1>Welcome to Our Cafe!</h1>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="/customer-dashboard">Cafe Management</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/customer-dashboard">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/add-to-cart">Add to Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="/aboutus">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contactus">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5" style="margin-top: 120px;">
+        
+        <!-- Featured Dishes Section -->
+        <h2 class="text-center mb-4">Our Specialties</h2>
+        <div class="row">
+            <div class="col-md-4" th:each="dish : ${dishes}">
+                <div class="card dish-card">
+                    <img th:src="@{${dish.imageUrl}}" class="card-img-top" alt="Dish Image">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${dish.name}"></h5>
+                        <p class="card-text" th:text="${dish.description}"></p>
+                        <p class="card-text">Price: ₹<span th:text="${dish.price}"></span></p>
+                        <form th:action="@{/add-to-cart}" method="post">
+                            <input type="hidden" name="dishId" th:value="${dish.id}">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" name="quantity" min="1" max="10" required>
+                            <button type="submit" class="btn btn-primary mt-2">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Promotions Section -->
+        <div class="promotions-section text-center mt-5">
+            <h3 class="mb-4">Today's Special Promotions</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="promo-card">
+                        <h5>Combo Offer 1</h5>
+                        <p>Get a burger, fries, and a drink for just ₹199!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="promo-card">
+                        <h5>Family Meal</h5>
+                        <p>Feed the family with a large pizza and two sides for ₹499.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="promo-card">
+                        <h5>Discount on Dessert</h5>
+                        <p>Get 20% off on all desserts today only!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonials Section -->
+        <div class="testimonials-section mt-5">
+            <h3 class="text-center mb-4">What Our Customers Say</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"The food was absolutely amazing! I will definitely be coming back!" - Priya</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"Great service and a cozy atmosphere. Highly recommend the pizzas!" - Ravi</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"Loved the dessert! Perfect place for a weekend hangout." - Ananya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

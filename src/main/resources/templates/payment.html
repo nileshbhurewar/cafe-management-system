@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/payment.css">  <!-- Link to external CSS -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="/customer-dashboard">Cafe Management</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/customer-dashboard">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/add-to-cart">Add to Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="/aboutus">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contactus">Contacts</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cafe Information Section (Logo Removed) -->
+    <div class="container my-5" style="margin-top: 100px;">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h4>Cafe Management</h4>
+                <p>We are dedicated to serving you the best dishes with quality ingredients and a great ambiance. Come visit us!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Information Section -->
+    <div class="container my-5 payment-section">
+        <h2 class="text-center mb-4">Payment Information</h2>
+        <form th:action="@{/payment-success}" method="post">
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" name="cardNumber" class="form-control" id="cardNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="expiryDate">Expiry Date</label>
+                <input type="text" name="expiryDate" class="form-control" id="expiryDate" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" name="cvv" class="form-control" id="cvv" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Make Payment</button>
+        </form>
+
+        <!-- Payment Success Message -->
+        <div th:if="${paymentSuccess}">
+            <p class="text-success mt-4">Payment successful! Thank you for your order.</p>
+        </div>
+
+        <!-- Payment Methods Section -->
+        <div class="payment-icons text-center mt-5">
+            <h4>Accepted Payment Methods</h4>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbOsJUPXMDaZXyJA2PxFYv2gEVkGofB0fsyQ&s" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/MasterCard_early_1990s_logo.png/640px-MasterCard_early_1990s_logo.png" alt="MasterCard">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR01IiJEzLYwzuQethJraGGG-3-vbKQ8AbQTQ&s" alt="PayPal">
+            <img src="https://media.designrush.com/inspirations/656399/conversions/1-preview.jpg" alt="Stripe">
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Cafe Management. All rights reserved.</p>
+    </footer>
+</body>
+</html>

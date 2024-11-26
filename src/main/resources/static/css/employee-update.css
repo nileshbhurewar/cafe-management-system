@@ -1,0 +1,119 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #00796b;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #00796b;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #004d40 !important;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin-top: 30px;
+}
+
+/* Greeting Message Styles */
+.greeting-message {
+    background-color: #e0f7fa;
+    border-left: 5px solid #00796b;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.greeting-message h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00796b;
+}
+
+.greeting-message p {
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.greeting-message .greeting-footer {
+    font-size: 1em;
+    font-style: italic;
+    color: #004d40;
+}
+
+/* Form Container Styles */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label {
+    font-weight: bold;
+}
+
+.form-container .form-control {
+    margin-bottom: 15px;
+}
+
+.form-container button {
+    width: 100%;
+    background-color: #00796b;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-container button:hover {
+    background-color: #004d40;
+}
+
+/* Alert Message Styles */
+.alert-message {
+    margin-top: 20px;
+}

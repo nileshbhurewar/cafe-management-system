@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+    color: #cce5ff;
+}
+
+/* Cafe Information Section (Logo Removed) */
+.container {
+    margin-top: 100px;
+}
+
+h4 {
+    color: #007bff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Payment Information Section */
+.payment-section {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Payment Methods Section */
+.payment-icons img {
+    width: 50px;
+    margin: 0 10px;
+}
+
+.payment-icons h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Footer Section */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+}

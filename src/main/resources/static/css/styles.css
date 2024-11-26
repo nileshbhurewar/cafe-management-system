@@ -1,0 +1,125 @@
+body {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 30px;
+  color: #343a40;
+}
+
+.heading h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #007bff !important;
+}
+
+.navbar-nav .nav-link {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.hero {
+  background: url('https://t4.ftcdn.net/jpg/02/34/63/07/360_F_234630793_eHKQucxaXftnWrecTJFITmD4cr3TlUgG.jpg') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.features {
+  margin-top: 30px;
+  text-align: center;
+  background: url('https://imgmedia.lbb.in/media/2024/07/66a0b4750ae4dd05ba5cfb22_1721807989786.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 40px 20px;
+  color: white; /* Adjust text color for contrast */
+  border-radius: 10px;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+
+.role-links {
+  margin: 20px 0;
+}
+
+.role-links a {
+  display: block;
+  font-size: 1.2rem;
+  color: #007bff;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.role-links a:hover {
+  text-decoration: underline;
+}
+
+.register-link {
+  margin-top: 20px;
+}
+
+.register-link a {
+  font-weight: bold;
+  color: #28a745;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.features .feature-card {
+  margin-bottom: 20px;
+}
+
+.feature-card .card {
+  background: rgba(0, 0, 0, 0); /* Transparent card background */
+  color: white; /* Text color inside the card */
+  border: none;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-text {
+  font-size:large;
+}
+
+
+.cta-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta-btn button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  color: #6c757d;
+}

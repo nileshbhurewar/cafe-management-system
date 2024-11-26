@@ -1,0 +1,86 @@
+/* logintype.css */
+
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f6f3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #6c757d !important;
+}
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #495057 !important;
+}
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Login Type Section */
+.login-type-section {
+    background: linear-gradient(to right, #ffe0b2, #ffc1a1);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-type-section h1 {
+    font-size: 2.5rem;
+    color: #444;
+    font-weight: bold;
+}
+
+.login-type-section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Role Links */
+.role-links .btn {
+    width: 200px;
+    margin: 10px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* Info Section */
+.info-section {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.info-section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.info-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}

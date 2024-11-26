@@ -1,0 +1,91 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 56px; /* Adjusted to fit below navbar */
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #343a40;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+.sidebar a {
+    display: block;
+    color: #cfd8dc;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 220px; /* Ensures the main content is pushed to the right of the sidebar */
+    padding: 20px;
+}
+
+.card {
+    max-width: 700px; /* Adjusted card width */
+    margin: 0 auto; /* Center the card */
+    border-radius: 10px;
+}
+
+.card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #343a40;
+    color: #cfd8dc;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button Styling */
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .footer {
+        position: static;
+    }
+}

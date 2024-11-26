@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Order Page</title>
+    <link rel="stylesheet" href="/css/order-page.css">
+    <style>
+        .dish-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px;
+            text-align: center;
+            width: 200px;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            vertical-align: top;
+        }
+        .dish-card img {
+            max-width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+        .dish-card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .dish-card .price {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">Cafe Management</a>
+        <div class="navbar-links">
+            <a class="nav-link" href="/employee-dashboard">Home</a>
+            <a class="nav-link" href="/aboutus">About</a>
+            <a class="nav-link" href="/contactus">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/employee-dashboard/orders">Place Order</a>
+        <a href="/employee-dashboard/view-orders">View Orders</a>
+        <a href="/employee-dashboard/dishes/list">View All Dishes</a>
+        <a href="/employee-dashboard/dishes/add">Add New Dish</a>
+        <a href="/employee-dashboard/profile">View Profile</a>
+        <a href="/logout">Log Out</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Order Dishes</h1>
+        <form th:action="@{/employee-dashboard/place-order}" method="post" class="dish-container">
+    <!-- Customer Name Input -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" name="customerName" required />
+    </div>
+    
+    <!-- Dish Cards Loop -->
+    <div th:each="dish : ${dishes}" class="dish-card">
+        <img th:src="${dish.imageUrl}" alt="Dish Image"/>
+        <h3 th:text="${dish.name}"></h3>
+        <p class="price" th:text="'$' + ${dish.price}"></p>
+        <label>
+            Quantity: 
+            <input type="number" th:name="quantities" th:value="1" min="1" />
+        </label><br/><br/>
+        <input type="checkbox" th:name="dishIds" th:value="${dish.id}" />
+        <label>Add to Order</label>
+    </div>
+    
+    <!-- Submit Button -->
+    <div style="clear: both; text-align: center; margin-top: 20px;">
+        <button type="submit" class="btn">Place Order</button>
+    </div>
+</form>
+
+    </div>
+
+</body>
+</html>

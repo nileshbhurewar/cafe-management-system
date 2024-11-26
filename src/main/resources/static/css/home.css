@@ -1,0 +1,180 @@
+/* Hero Section Styling */
+/* Hero Section Styling */
+.hero-section {
+    background-image: url('https://images.unsplash.com/photo-1453614512568-c4024d13c247?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhZmV8ZW58MHx8MHx8fDA%3D');  /* Adjust the path to your image */
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Darker text for better contrast */
+    padding: 100px 0;
+    font-family: 'Montserrat', sans-serif;  /* A modern, clean font */
+    position: relative;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);  /* White overlay for readability */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 60px;  /* Increased size for prominence */
+    font-weight: bold;
+    color: #000;  /* Solid black for high contrast */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);  /* Subtle shadow for depth */
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 24px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 30px;  /* Centered and padded */
+}
+
+.hero-section .btn {
+    background-color: #ff6b6b;  /* Custom button color */
+    border: none;
+    padding: 12px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background-color: #e54848;
+    color: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Card Customization */
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Dine-In & Online Order */
+/* Dine-In or Online Order Section */
+.choose-experience {
+    background-color: #f8f9fa;  /* Light background for contrast */
+    padding: 60px 0;
+    border-radius: 20px;  /* Rounded corners for a softer look */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+}
+
+.choose-experience h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;  /* Stylish uppercase heading */
+    font-family: 'Montserrat', sans-serif;  /* Match the hero section */
+}
+
+.choose-experience h4 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.choose-experience p,
+.choose-experience address {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.choose-experience .btn-success {
+    background-color: #ff6b6b;  /* Custom button color (consistent with previous design) */
+    border: none;
+    padding: 12px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.choose-experience .btn-success:hover {
+    background-color: #e54848;
+    color: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Section Header */
+h2 {
+    color: #007bff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Cards */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    height: 200px;         /* Uniform image height */
+    object-fit: cover;      /* Ensures consistent image sizing */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Button */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    margin-top: auto;       /* Pushes button to bottom */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Ensure Consistent Margin */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #343a40;
+    color: white;
+    margin-top: 20px;
+}

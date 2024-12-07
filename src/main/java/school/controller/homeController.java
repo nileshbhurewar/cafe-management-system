@@ -41,10 +41,12 @@ public class homeController {
     public String homePage() {
         return "Home";
     }
+    // about-us page
     @RequestMapping("/aboutus")
     public String aboutus() {
     	return "aboutus";
     }
+    // contact-us page
     @RequestMapping("/contactus")
     	public String contactus() {
     		return "contactus";

@@ -9,7 +9,8 @@ body {
 /* Navbar */
 .navbar {
     background-color: #007bff;
-    
+    z-index: 1030;  /* Set z-index to ensure navbar stays above content */
+    position: relative; /* Ensure navbar is above content but not the sidebar */
 }
 
 .navbar .navbar-brand,
@@ -32,6 +33,7 @@ body {
     left: 0;
     padding-top: 20px;
     overflow-y: auto;
+    z-index: 1040;  /* Ensure sidebar is above the content area */
 }
 
 .sidebar a {
@@ -51,6 +53,12 @@ body {
     margin-left: 250px; /* Ensure content area doesn't overlap with the sidebar */
     padding: 20px;
     margin-top: 70px; /* Make space for the fixed navbar */
+    z-index: 1; /* Content should be below navbar and sidebar */
+}
+
+/* Layout and Spacing */
+.container {
+    margin-top: 30px;
 }
 
 h2 {
@@ -78,11 +86,6 @@ button {
 
 button:hover {
     background-color: #218838;
-}
-
-/* Layout and Spacing */
-.container {
-    margin-top: 30px;
 }
 
 /* Table Styles */

@@ -37,9 +37,9 @@ public class homeController {
 
 
     // Home Page
-    @RequestMapping("/")
+   @GetMapping("/")
     public String homePage() {
-        return "Home";
+    return "home";
     }
     // about-us page
     @RequestMapping("/aboutus")
